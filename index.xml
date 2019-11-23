@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mediumish</title>
-    <link>https://example.com/</link>
-    <description>Recent content on Mediumish</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>John Doe - All rights reserved</copyright>
-    
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
-    
+    <title>Academic</title>
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Academic</title>
+      <link>/</link>
+    </image>
     
   </channel>
 </rss>
