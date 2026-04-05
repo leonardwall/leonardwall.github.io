@@ -58,3 +58,4 @@ Replace placeholders for:
 - migrate your best LinkedIn or Splunk Perspectives articles into `src/content/insights`
 - add your actual speaking and media history
 - connect the homepage CTAs to your top 3 flagship pieces
+
