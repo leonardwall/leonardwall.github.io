@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout title="Projects | Leonard Wall" description="Selected projects and frameworks from Leonard Wall.">
+  <section class="mx-auto max-w-content px-6 py-20">
+    <p class="text-sm uppercase tracking-[0.22em] text-accent">Projects</p>
+    <h1 class="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">Selected work and frameworks</h1>
+    <div class="mt-10 grid gap-6 lg:grid-cols-2">
+      {projects.map((project) => (
+        <a href={`/projects/${project.slug}/`} class="rounded-3xl border border-line bg-panel p-7 hover:border-accent">
+          <h2 class="text-2xl font-semibold text-text">{project.data.title}</h2>
+          <p class="mt-3 text-sm leading-7 text-muted">{project.data.description}</p>
+          <p class="mt-4 text-sm font-semibold text-accent">Explore project</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

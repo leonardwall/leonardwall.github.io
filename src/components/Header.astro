@@ -1,0 +1,23 @@
+---
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/insights', label: 'Insights' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/speaking', label: 'Speaking' },
+  { href: '/contact', label: 'Contact' }
+];
+const path = Astro.url.pathname;
+---
+<header class="sticky top-0 z-50 border-b border-line/80 bg-bg/80 backdrop-blur">
+  <div class="mx-auto flex max-w-content items-center justify-between px-6 py-4">
+    <a href="/" class="text-sm font-semibold tracking-[0.2em] text-text uppercase">Leonard Wall</a>
+    <nav class="hidden gap-6 md:flex">
+      {nav.map((item) => (
+        <a href={item.href} class:list={["text-sm", path === item.href || (item.href !== '/' && path.startsWith(item.href)) ? 'text-text' : 'text-muted hover:text-text']}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
